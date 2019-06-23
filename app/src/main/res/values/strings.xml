@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HomeTaskApi2</string>
+    <string name="app_name">ChocoMVP</string>
     <string name="title_deal">Deal</string>
     <string name="title_goods">Goods</string>
     <string name="title_purchases">Purchases</string>

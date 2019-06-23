@@ -9,7 +9,7 @@ import retrofit2.http.Query;
 
 public interface GetDealApi {
 
-    @GET("deals")
+    @GET("deals ")
     Call<DealWrapper> getDealList(
             @Query("town_id") int townId,
             @Query("category_id") int categoryId,

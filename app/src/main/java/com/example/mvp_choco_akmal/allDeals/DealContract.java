@@ -5,6 +5,8 @@ import com.example.mvp_choco_akmal.entities.DealWrapper;
 
 import java.util.List;
 
+import retrofit2.Call;
+
 public interface DealContract {
 
     interface View{
@@ -16,11 +18,9 @@ public interface DealContract {
 
     interface Presenter{
         void load(int page);
-        void loadingFinished(DealWrapper dealWrapper);
-        void loadingFailed(Throwable throwable);
     }
 
     interface Model{
-        void getDealList(int page);
+        Call<DealWrapper> getDealList(int page);
     }
 }

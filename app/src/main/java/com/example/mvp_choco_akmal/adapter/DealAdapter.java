@@ -31,13 +31,13 @@ public class DealAdapter extends RecyclerView.Adapter<DealViewHolder> {
         this.dealEntityList = new ArrayList<>();
     }
 
-    public void setDealEntityList(List<DealEntity> dealEntityList){
+    public void setDealEntityList(List<DealEntity> dealEntityList){   /**Why do we create a new dealEntityList? ABOVE WE HAVE CREATED one already*/
         this.dealEntityList.clear();
         this.dealEntityList.addAll(dealEntityList);
         notifyDataSetChanged();
     }
 
-    public void addDealEntityList(List<DealEntity> dealEntityList){
+    public void addDealEntityList(List<DealEntity> dealEntityList){    /**Why do we have addDealEntityList() while we have setDealEntityList()?*/
         this.dealEntityList.addAll(dealEntityList);
         notifyDataSetChanged();
     }
@@ -46,7 +46,7 @@ public class DealAdapter extends RecyclerView.Adapter<DealViewHolder> {
     @Override
     public DealViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_layout, viewGroup, false);
-        return new DealViewHolder(view);
+        return new DealViewHolder(view);   /**Is it RECURSION?*/
     }
 
     @Override

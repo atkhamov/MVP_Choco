@@ -30,11 +30,11 @@ public class DealViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void bind(DealEntity dealEntity){
-        dealRate.setText(dealEntity.getDiscount());
+        dealRate.setText(String.valueOf(dealEntity.getDiscount()));
         dealTitleShort.setText(dealEntity.getTitleShort());
         dealTitleLong.setText(dealEntity.getTitle());
-        dealBought.setText(dealEntity.getBought());
-        dealPrice.setText(dealEntity.getPrice());
+        dealBought.setText(String.valueOf(dealEntity.getBought()));
+        dealPrice.setText(String.valueOf(dealEntity.getPrice()));
 
         Glide.with(itemView)
                 .load(dealEntity.getImageUrl())
